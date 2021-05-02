@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    #region 欄位
     [Header("移動速度"),Range(0,1000)]
     public float speed = 10.5f;
     [Header("跳越高度"), Range(0, 3000)]
@@ -24,4 +25,59 @@ public class Player : MonoBehaviour
     private AudioSource aud;
     private Rigidbody2D rig;
     private Animator ani;
+    #endregion
+
+    #region 方法
+    /// <summary>
+    /// 移動
+    /// </summary>
+    private void Move()
+    {
+        print("");
+    }
+
+    /// <summary>
+    /// 跳躍
+    /// </summary>
+    private void Jump()
+    {
+        print("");
+    }
+
+    /// <summary>
+    /// 開槍
+    /// </summary>
+    private void Fire()
+    {
+        print("");
+    }
+
+    /// <summary>
+    /// 傷害
+    /// </summary>
+    /// <param name="damage"></param>
+    private void Hit(float damage)
+    {
+        print("");
+    }
+
+    /// <summary>
+    /// 死亡
+    /// </summary>
+    /// <param name="dead"></param>
+    /// <returns></returns>
+    private bool Dead()
+    {
+        return false;
+    }
+
+    /// <summary>
+    /// 吃道具
+    /// </summary>
+    /// <param name="prop"></param>
+    private void EatProp(string prop)
+    {
+        print("");
+    }
+    #endregion
 }

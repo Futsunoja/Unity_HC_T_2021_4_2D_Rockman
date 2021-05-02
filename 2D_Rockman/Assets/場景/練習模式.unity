@@ -155,6 +155,22 @@ MonoBehaviour:
   weignt: 1.5
   brand: BMW
   hasWindow: 1
+  v2: {x: 0, y: 0}
+  v2zero: {x: 0, y: 0}
+  v2one: {x: 1, y: 1}
+  v2my: {x: 7, y: 9}
+  v3: {x: 1, y: 2, z: 3}
+  v4: {x: 1, y: 2, z: 3, w: 4}
+  key1: 0
+  key2: 97
+  key3: 323
+  key4: 350
+  obj1: {fileID: 0}
+  tra: {fileID: 0}
+  spr: {fileID: 0}
+  number: 1
+  test: 0
+  prop: "\u7D05\u8272\u85E5\u6C34"
 --- !u!212 &71489802
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -301,4 +317,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1184509948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184509950}
+  - component: {fileID: 1184509949}
+  m_Layer: 0
+  m_Name: "\u7DF4\u7FD2\u7A0B\u5F0F\u7269\u4EF6"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1184509949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184509948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73e62e1af63aae45a4d2351d32c2fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1184509950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184509948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8101287, y: -2.0525744, z: -0.56933594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
