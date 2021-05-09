@@ -54,7 +54,7 @@ public class APIStatic : MonoBehaviour
         //print("是否按下任意按鍵：" + Input.anyKeyDown);
         //print("遊戲時間：" + Time.time);
 
-        //bool b = Input.GetButtonDown("space");
+        bool b = Input.GetKeyDown("space");
         //print("是否按下空白：" + b);
         #endregion
     }

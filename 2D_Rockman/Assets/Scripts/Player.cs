@@ -27,13 +27,46 @@ public class Player : MonoBehaviour
     private Animator ani;
     #endregion
 
+    private void Start()
+    {
+        //利用程式取的方法
+        //傳回元件 取得元件<元件名稱>() - <泛型>
+        //取得跟腳本同一層的元件
+        rig = GetComponent<Rigidbody2D>();
+    }
+
+    //一秒約執行60次
+    private void Update()
+    {
+        Move();
+        Jump();
+    }
+
+    [Header("判斷地板碰撞的位移與半徑")]
+    public Vector3 groundOffset;
+    public float groundRadius = 0.2f;
+
+    //繪製圖示-輔助編輯時的圖形線條
+    private void OnDrawGizmos()
+    {
+        //1.指定顏色
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        //2.繪製圖形
+        //transform可以抓到此腳本同一層的變形元件
+        Gizmos.DrawSphere(transform.position+groundOffset,groundRadius);
+    }
+
     #region 方法
     /// <summary>
     /// 移動
     /// </summary>
     private void Move()
     {
-        print("");
+        //1.玩家按下左右鍵的資訊
+        float h = Input.GetAxis("Horizontal");
+        //2.使用左右鍵的資訊控制左右
+        //剛體.加速度=二為向量(水平*速度*一幀的時間，0)
+        rig.velocity = new Vector2(h * speed * Time.deltaTime, rig.velocity.y);
     }
 
     /// <summary>
@@ -41,7 +74,10 @@ public class Player : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        print("");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rig.AddForce(new Vector2(0, jump));
+        }
     }
 
     /// <summary>
@@ -49,7 +85,7 @@ public class Player : MonoBehaviour
     /// </summary>
     private void Fire()
     {
-        print("");
+        
     }
 
     /// <summary>
@@ -58,7 +94,7 @@ public class Player : MonoBehaviour
     /// <param name="damage"></param>
     private void Hit(float damage)
     {
-        print("");
+        
     }
 
     /// <summary>

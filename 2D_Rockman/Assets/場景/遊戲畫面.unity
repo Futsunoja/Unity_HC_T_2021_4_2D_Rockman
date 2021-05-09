@@ -6793,7 +6793,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_Sprite: {fileID: -537442937522988651, guid: 0fdca0ffa90c6244785e8bb53d93658c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6898,7 +6898,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 06494b29fa34e8c4383ea236e8e0663b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6963,7 +6963,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &2123224840
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6992,11 +6992,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1971fe28210bea47b15fc0ab23b25a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10.5
-  jump: 100
+  speed: 1000
+  jump: 300
   hp: 100
   isGrounded: 0
   bullet: {fileID: 0}
   bulletPoint: {fileID: 0}
   bulletSpeed: 800
   bulletSound: {fileID: 0}
+  groundOffset: {x: -0.09, y: -1.21, z: 0}
+  groundRadius: 0.2
